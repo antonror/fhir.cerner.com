@@ -159,3 +159,16 @@ operations:
         <li>Requires a <a href="#test-name-id">test operation</a> to be provided for the `HumanName.id` of the name whose `family` is intended to be replaced.</li>
         <li>This operation is only supported for the first name in the list of related person names (<code>{index}</code> == 0).</li>
       </ul>
+
+  - name: test-telecom-id
+    path: /telecom/{index}/id
+    operation: test
+    type: string
+    url: https://hl7.org/fhir/R4/element-definitions.html#Element.id
+    description: Test the value of the `ContactPoint.id` of the telecom at the given <code>{index}</code> in the list of related person telecoms.
+    example: |
+      {
+        "path": "/telecom/0/id",
+        "op": "test",
+        "value": "CI-PH-2807950-0"
+      }
