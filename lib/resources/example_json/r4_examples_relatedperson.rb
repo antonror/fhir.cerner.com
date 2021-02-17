@@ -1380,6 +1380,11 @@ module Cerner
         'op': 'replace',
         'path': '/name/0/family',
         'value': 'Potter'
+      },
+      {
+        'op': 'test',
+        'path': '/telecom/0/id',
+        'value': 'CI-PH-29811920-0'
       }
     ].freeze
   end
