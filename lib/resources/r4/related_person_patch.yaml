@@ -177,12 +177,12 @@ operations:
     path: /telecom/{index}
     operation: remove
     type: N/A
-    url: https://hl7.org/fhir/R4/patient-definitions.html#related person.telecom
+    url: https://hl7.org/fhir/R4/related-person-definitions.html#RelatedPerson.telecom
     description: Remove the telecom at the given <code>{index}</code> in the list of related person telecoms.
     example: |
       {
         "op": "remove"
-        "path": "/telecom/1"
+        "path": "/telecom/0"
       }
     note: >
       <ul>
