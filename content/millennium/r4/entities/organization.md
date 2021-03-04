@@ -64,42 +64,11 @@ Search for Organizations that meet supplied query parameters:
 
 The common [errors] and [OperationOutcomes] may be returned.
 
-## Retrieve by id
-
-List an individual Organization by its id:
-
-    GET /Organization/:id
-
-### Authorization Types
-
-<%= authorization_types(provider: true, patient: true, system: true) %>
-
-### Headers
-
-<%= headers fhir_json: true %>
-
-### Example
-
-#### Request
-
-    GET https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Organization/675844
-
-#### Response
-
-<%= headers status: 200 %>
-<%= json(:r4_organization_entry) %>
-
-<%= disclaimer %>
-
-### Errors
-
-The common [errors] and [OperationOutcomes] may be returned.
-
 ## $get-cg-for-mrcu
 
-Retrieve Caregiver Organizations that match the supplied care unit organization id:
+Search for Caregiver Organizations that meet supplied query parameters:
  
-    GET /Organization/$get-cg-for-mrcu?_id=:id
+    GET /Organization/$get-cg-for-mrcu?:parameters
 
 _Implementation Note_
 
@@ -130,6 +99,36 @@ _Implementation Note_
 
 The common [errors] and [OperationOutcomes] may be returned.
 
+## Retrieve by id
+
+List an individual Organization by its id:
+
+    GET /Organization/:id
+
+### Authorization Types
+
+<%= authorization_types(provider: true, patient: true, system: true) %>
+
+### Headers
+
+<%= headers fhir_json: true %>
+
+### Example
+
+#### Request
+
+    GET https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Organization/675844
+
+#### Response
+
+<%= headers status: 200 %>
+<%= json(:r4_organization_entry) %>
+
+<%= disclaimer %>
+
+### Errors
+
+The common [errors] and [OperationOutcomes] may be returned.
 ## Create
 
 Create new Organization.
